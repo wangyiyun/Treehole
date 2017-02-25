@@ -1,0 +1,16 @@
+package owlnest;
+
+import java.util.Scanner;
+
+public class feather {
+	public static void main(String args[]){
+		Scanner owl = new Scanner(System.in);
+		double fnum, snum, answer;
+		System.out.println("Enter the first num: ");
+		fnum = owl.nextDouble();
+		System.out.println("Enter the second num: ");
+		snum = owl.nextDouble();
+		answer = fnum + snum;
+		System.out.println(answer);
+	}
+}
