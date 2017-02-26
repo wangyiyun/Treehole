@@ -1,0 +1,42 @@
+#include <cstdio>
+#include <windows.h>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int flag = -1; //控制每次盈亏 flag = 0 
+int n; //强制循环数 
+double f; //下注资金比 
+double money = 10000;//当前资金数，初始资金一万元； 
+int MAXN;
+
+int frand()
+{
+	if(flag == -1) flag = 1;
+	else flag = -1;
+	return flag;
+}
+
+int main()
+{
+	cout<<"you have "<<money<<" now.\n";
+	cout<<"This simulation will end when your own less than 1 cent or reach the max-round.\n"<<"Input f:\n";
+	cin>>f;
+	cout<<"Input max-round:\n";
+	cin>>n;
+	MAXN = n;
+	int coin;
+	while(n)
+	{
+		if(money <= 0.01) break;//余额小于一分 
+		cout<<MAXN-n+1<<"	";
+		coin = frand();
+		money = money + money*f*coin;
+		cout<<money<<"\n";
+		n--;
+	}
+	cout<<"END\n";
+	return 0;
+	system("pause"); //it dosen't work	 
+}
