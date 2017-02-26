@@ -1,0 +1,20 @@
+package owlnest;
+
+import java.util.Scanner;
+
+public class feather {
+	public static void main(String args[]){
+		claw clawObject = new claw();
+		clawObject.leaveMessage();
+	}
+}
+
+package owlnest;
+
+public class claw {
+	public void leaveMessage(){
+		System.out.println("This is claw.");
+	}
+}
+
+//I don't know how to upload those Java stuff.
